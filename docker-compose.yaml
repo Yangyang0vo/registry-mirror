@@ -81,7 +81,7 @@ services:
       - ./data:/var/lib/registry
       - ./quay/config.yml:/etc/docker/registry/config.yml
   custom:
-    container_name: custom 
+    container_name: custom
     image: registry:2.6.2
     restart: always
     volumes:
@@ -92,6 +92,6 @@ services:
     image: nginx:1.19.7
     restart: always
     ports:
-        - "80:80"
+      - '81:81'
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
